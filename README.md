@@ -1,5 +1,5 @@
 # NakSeo
 NakSeo's development diary
 
-서노의 개발자 아다떼기
-Since. 2019.08.03
+# 서노의 프로그래밍 아다떼기 become to developer
+since 2019-08-03
