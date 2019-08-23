@@ -10,3 +10,5 @@
 `.status-bar*2`를 치면 `<div class="status-bar"></div>` 라는 코드가 2개 로드됨.
 
 `span.status-bar__clock`을 치면 `<span class=status-bar__clock></span>`가 로드됨.
+
+`li.nav__list-item*4>a.nav__list-link` 를 치면 `<ni class="nav__list-item"><a href="" class="nav__list-link"></a></ni>`가 로드됨.
