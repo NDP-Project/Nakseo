@@ -7,7 +7,7 @@
 </head>
 <body>
    <div class="status-bar">
-      <div class="status-bar__column"></div>
+      <div class="status-bar__column"></div> <!-- column은 세로 라는 뜻이다. 구분하기 위해 사용하는듯? -->
          <span class="status_bar__clock">13:54</span>
       <div class="status-bar__column"></div>
       <i class="fas fa-clock"></i>
@@ -32,8 +32,42 @@
    <main class="friends">
       <header class="friends__list">
          <div class="friends__list">
-            <div class="friedns__friend friend friend__large">
-               <img src="images/image.jpg" class="g-avatar friends__avatar">
+            <div class="friedns__friend friend__large">
+               <div class="friend__column">
+                     <img src="images/avatar.jpg" class="g-avatar friends__avatar">
+                     <div class="friend__content">
+                        <span class="friend__name">
+                           Nicolas Serrano
+                        </span>
+                        <span class="friend__status">
+                           nomadcoders.co
+                        </span>
+                     </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div class="friends__plus">
+         <h5 class="friends__title">Plus Friend</h5>
+         <div class="friends__list">
+            <div class="friedns__friend friend">
+               <div class="friend__column">
+               <img src="images/avatar.jpg" class="g-avatar friends__avatar">
+                  <div class="friend__content">
+                     <span class="friend__name">
+                        Plus Friend
+                     </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <ul class="friends__list">
+         <h5 class="friends__title">Friends 14</h5>
+         <li class="friends__list">
+            <div class="friedns__friend friend__large">
+               <div class="friend__column">
+               <img src="images/avatar.jpg" class="g-avatar friends__avatar">
                   <div class="friend__content">
                      <span class="friend__name">
                         Nicolas Serrano
@@ -42,22 +76,18 @@
                         nomadcoders.co
                      </span>
                   </div>
-            </div>
-         </div>
-      </header>
-      <div class="friedns__plus-">
-         <h5 class="friends__title">Plus Friend</h5>
-         <div class="friends__list">
-            <div class="friedns__friend friend friend">
-               <img src="images/image.jpg" class="g-avatar friends__avatar">
-                  <div class="friend__content">
-                     <span class="friend__name">
-                        Plus Friend
+               </div>
+               <div class="friend__column">
+                  <div class="friend__now-listening">
+                     <span>
+                        FTISLAND - 지독하게
                      </span>
+                     <i class="fas fa-play"></i>
                   </div>
+               </div>
             </div>
-         </div>
-      </div>
+         </li>
+      </ul>
    </main>
    <nav class="navigation">
       <ul class="nav__list">
