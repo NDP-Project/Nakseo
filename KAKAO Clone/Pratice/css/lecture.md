@@ -15,5 +15,5 @@ css와 html을 연결하는 방법
 
 ---
 css의 elements들은 모두 박스임.
-<img src="Desktop/Study/Nakseo/KAKAO Clone/Pratice/css/box.png>
+![box](Desktop/Study/Nakseo/KAKAO Clone/Pratice/css/box.png)
 
