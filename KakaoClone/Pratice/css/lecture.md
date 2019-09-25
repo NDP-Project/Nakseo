@@ -25,7 +25,7 @@ css는 두가지 파트로 나뉘어져있음.
 
 ### border - 폭 / 스타일(점선, 직선 등등) / 색상
 
-박스는 block이나 inline block 둘 중 하나가 되어야 함. defult = block
+박스는 block이나 inline block 둘 중 하나가 되어야 함. default = block
 
 block - element가 크기와 상관없이 그 옆에 다른 element가 위치하는것을 허용하지 않는 것. = 무엇이든 그 밑으로 위치하게 됨. 폭, 높이값이 존재함.
 
