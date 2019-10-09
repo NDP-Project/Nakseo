@@ -63,10 +63,7 @@ Fixed는 고정, 어디든 오버랩되어서 계속 해당 위치에 고정시�
 Absolute는 Relative에 상대적으로 포지션을 잡는것. relative 포지션이 없을경우, absolute는 문서의 본문 body에 맞춰서 위치를 잡음. <br>
 그러므로 Absoulte 포지션을 부모 element에 상대적으로 사용하려면 부모 element에게 relative포지션을 먼저 부여해줘야함.**
 
-
-
-
-
+---
 ## Flex
 
 ### order
@@ -82,6 +79,7 @@ space-between: 요소들 사이에 동일한 간격을 둡니다.
 space-around: 요소들 주위에 동일한 간격을 둡니다.
 
 예를 들어, justify-content: flex-end;는 개구리를 오른쪽으로 이동시킵니다.
+
 ---
 ### align-items
 이 CSS 속성은 다음의 값들을 인자로 받아 요소들을 **세로선 상에서 정렬**합니다:
@@ -93,6 +91,7 @@ baseline: 요소들을 컨테이너의 시작 위치에 정렬합니다.
 stretch: 요소들을 컨테이너에 맞도록 늘립니다.
 
 align-self는 개별 요소에 적용할 수 있는 또 다른 속성입니다. 이 속성은 align-items가 사용하는 값들을 인자로 받으며, 그 값들은 지정한 요소에만 적용됩니다.
+
 ---
 ### flex-direction
 이 CSS 속성은 다음의 값들을 인자로 받아 **컨테이너 안에서 요소들이 정렬해야 할 방향을 지정**합니다:
@@ -104,6 +103,7 @@ column-reverse: 요소들을 아래에서 위로 정렬합니다.
 
 column-reverse 또는 row-reverse를 사용하면 요소들의 start와 end의 순서도 뒤바뀝니다.
 Flex의 방향이 column일 경우 justify-content의 방향이 세로로, align-items의 뱡향이 가로로 바뀝니다.
+
 ---
 ### flex-wrap
 
@@ -119,13 +119,58 @@ wrap-reverse: 요소들을 여러 줄에 걸쳐 반대로 정렬합니다.
 
 ### align-content
 
-여러 줄 사이의 간격을 지정할 수 있습니다. 이 속성은 다음의 값들을 인자로 받습니다:
+여러 줄 사이의 간격을 지정할 수 있습니다. 이 속성은 다음의 값들을 인자로 받습니다
 
-flex-start: 여러 줄들을 컨테이너의 꼭대기에 정렬합니다.
-flex-end: 여러 줄들을 컨테이너의 바닥에 정렬합니다.
-center: 여러 줄들을 세로선 상의 가운데에 정렬합니다.
-space-between: 여러 줄들 사이에 동일한 간격을 둡니다.
-space-around: 여러 줄들 주위에 동일한 간격을 둡니다.
-stretch: 여러 줄들을 컨테이너에 맞도록 늘립니다.
+>flex-start: 여러 줄들을 컨테이너의 꼭대기에 정렬합니다.<br>
+>flex-end: 여러 줄들을 컨테이너의 바닥에 정렬합니다.<br>
+>center: 여러 줄들을 세로선 상의 가운데에 정렬합니다.<br>
+>space-between: 여러 줄들 사이에 동일한 간격을 둡니다.<br>
+>space-around: 여러 줄들 주위에 동일한 간격을 둡니다.<br>
+>stretch: 여러 줄들을 컨테이너에 맞도록 늘립니다.<br>
 
 이 속성을 사용하는 방법이 어려울 수 있습니다. align-content는 여러 줄들 사이의 간격을 지정하며, align-items는 컨테이너 안에서 어떻게 모든 요소들이 정렬하는지를 지정합니다. 한 줄만 있는 경우, align-content는 효과를 보이지 않습니다.
+
+---
+
+## Pseudo Selector
+**단순한 선택자 (HTML Tag, ID, Class)등으로 표현할 수 없는 어떤 것을 select하는 선택자임.**
+**특정한 상태 말고 규칙에 따라 상태가 바뀌는 요소를 선택할 때 사용하는 것이다.**
+
+>**selector:pseudo-name{
+>  property:value;
+>}**
+
+
+> example)
+> input[type="submit"]{
+>   background-color:red;
+> }
+> 
+> input{
+>   border:1px solid yellow;
+> }
+> 
+> .box :last-child{
+>   background-color:pink;
+> }
+> 
+> ---
+> `<div class="container">`<br>
+> `  <div class="box">`<br>
+> `    <div class="box child"></div>`<br>
+> `  </div>`<br>
+> `</div>`
+> 
+> .container > .box{ <br> 
+>   background-color:red;<br>
+> }
+> 
+> .child{                         
+>   background-color:blue;<br>
+> }
+
+
+<- container라는 class 이하 box라는 class를 가진 모든 값들이 선택됨.(직계)<br>
+
+
+<- 하지만 child는 box의 직계 아이라서 container에 영향을 받지 않음.
