@@ -187,11 +187,11 @@ wrap-reverse: 요소들을 여러 줄에 걸쳐 반대로 정렬합니다.
 
 2. focus
 
-.box:focus{
-  background-color:blue;
-}
-
--> 
+>.box:focus{
+>  background-color:blue;
+>}
+>
+>-> 
 
 3. visited
 
@@ -206,8 +206,89 @@ wrap-reverse: 요소들을 여러 줄에 걸쳐 반대로 정렬합니다.
 <br>
 -> 박스 위에 무언가가(마우스 커서) 올라타면 배경색이 핑크로 바뀜.
 
+---
+---
+## Advanced CSS
 
+### 1. Transitions
 
+What is Transition? -> 이동/변경을 멋지게 보여주는 효과. 애니메이션이라고 생각하면 편리할듯.
+
+**트랜지션은 state 중 visited를 제외한 focus, hover, active에서 효과적으로 적용이 됨.**
+
+ex)
+>`<style>`<br>
+>.box{ <br>
+>  background-color:blue;<br>
+>  color:white;<br>
+>  transition:background-color 5s ease-in-out<br>
+>}<br>
+>.box:hover{<br>
+>  background-color:red;<br>
+>}<br>
+>`</style>`
+---
+### 2. Transformations
+
+What is Transformations? -> HTML문서의 element들이 변경, 모습이 변하는 효과.
+박스를 만들고 그 박스를 회전시킬 수 있음.
+
+**트랜지션과 트랜스포메이션을 합쳐서 사용하는 경우가 많음!**
+
+ex)
+>`<style>` <br>
+>  .box{<br>
+>    width: 100px;<br>
+>    height: 100px;<br>
+>    background: red;<br>
+>    transtion: transform .5s ease-in-out;<br>
+>  }<br>
+>  .box:hover{<br>
+>    transform: rotate(1turn);<br>
+>  }<br>
+>`</style>`
+---
+### 3. Animations
+What is Animations? -> 트랜지션과 트랜스포메이션을 합쳤을 때 hover할 때 박스가 돌아가도록 설정했는데,
+hover 하지않아도 계속 돌아가게 할 수 있음!
+
+- **@keyframes** <- CSS로 하여금 '내가 지금 애니메이션을 생성했다' 라는것을 알려줌.
+
+  그러므로 애니메이션 이름을 지을 때 
+  > @Keyframes Name {}
+
+  이런식으로 시작해야함.
+
+- 두가지의 단계를 거침. 1. from, 2. to <br>
+from to 대신에 0%, 50%, 100% 등으로 여러단계를 거칠수도 있음.
+
+ex)
+>@keyframes exAniName { <br>
+>  from{<br>
+>    transform: none;<br>
+>  }<br>
+>  to{<br>
+>    transfrom: rotate(1turn) scale(.5, .5);<br>
+>  }<br>
+>}<br>
+><br>
+>.box {<br>
+>  animation: 1.5s exAniName ease-in-out;<br>
+>}<br>
+
+### 4. Media Queries
+
+body{
+  backhground-color:green;
+}
+**@media screen and (min-width 320px) and (max-width 640px) {**
+  body{
+    background-color:blue;
+  }
+**}**
+
+웹페이지의 크기에 따라 규칙을 작성하는것.
+320-640 크기에 맞는 페이지라면, 그 페이지의 배경색은 blue이고 그 외의 배경색은 green이다.
 
 
 
