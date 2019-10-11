@@ -136,22 +136,22 @@ wrap-reverse: 요소들을 여러 줄에 걸쳐 반대로 정렬합니다.
 **단순한 선택자 (HTML Tag, ID, Class)등으로 표현할 수 없는 어떤 것을 select하는 선택자임.**
 **특정한 상태 말고 규칙에 따라 상태가 바뀌는 요소를 선택할 때 사용하는 것이다.**
 
->**selector:pseudo-name{
->  property:value;
->}**
+>selector:pseudo-name{ <br>
+>  property:value; <br>
+>}
 
 
-> example)
-> input[type="submit"]{
->   background-color:red;
+> example) <br>
+> input[type="submit"]{ <br>
+>   background-color:red; <br>
 > }
 > 
-> input{
->   border:1px solid yellow;
+> input{ <br>
+>   border:1px solid yellow; <br>
 > }
 > 
-> .box :last-child{
->   background-color:pink;
+> .box :last-child{ <br>
+>   background-color:pink; <br>
 > }
 > 
 > ---
@@ -161,16 +161,53 @@ wrap-reverse: 요소들을 여러 줄에 걸쳐 반대로 정렬합니다.
 > `  </div>`<br>
 > `</div>`
 > 
-> .container > .box{ <br> 
+> 1. .container > .box{ <br> 
 >   background-color:red;<br>
 > }
 > 
-> .child{                         
+> 2. .child{                         
 >   background-color:blue;<br>
 > }
 
 
-<- container라는 class 이하 box라는 class를 가진 모든 값들이 선택됨.(직계)<br>
+> 1. <- container라는 class 이하 box라는 class를 가진 모든 값들이 선택됨.(직계)
 
 
-<- 하지만 child는 box의 직계 아이라서 container에 영향을 받지 않음.
+> 2. <- 하지만 child는 box의 직계 아이라서 container에 영향을 받지 않음.
+
+---
+## CSS States
+1. :active 
+
+>.box:active{ <br>
+>  background-color: green; <br>
+>} <br>
+> <br>
+>-> 클릭할때마다 배경색이 녹색이 되었다가 바뀜.
+
+2. focus
+
+.box:focus{
+  background-color:blue;
+}
+
+-> 
+
+3. visited
+
+-> 아마 하이퍼링크처럼 클릭했던 부분은 색깔 변하게 만드는 것 같다.
+
+
+4. hover
+
+>.box:hover{ <br>
+>  background-color: pink; <br>
+>} <br>
+<br>
+-> 박스 위에 무언가가(마우스 커서) 올라타면 배경색이 핑크로 바뀜.
+
+
+
+
+
+
