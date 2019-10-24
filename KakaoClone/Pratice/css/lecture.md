@@ -319,3 +319,12 @@ background-color:blue;
 ## Reset CSS
 
 -> 모든 기본값을 margin:0으로 만드는것.
+
+
+
+## 작업을 할 때 파일을 여러가지(기능별)로 쪼개는것이 좋다.
+  계속 스크롤하기도 어렵고, 나중에 수정하기도 편하기 때문이다.
+
+
+div는 display:block이 적용되어있다.
+span은 inline이 적용되어있다.
