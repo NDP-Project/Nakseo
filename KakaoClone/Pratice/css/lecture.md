@@ -320,11 +320,23 @@ background-color:blue;
 
 -> 모든 기본값을 margin:0으로 만드는것.
 
-
-
 ## 작업을 할 때 파일을 여러가지(기능별)로 쪼개는것이 좋다.
   계속 스크롤하기도 어렵고, 나중에 수정하기도 편하기 때문이다.
 
-
 div는 display:block이 적용되어있다.
+
 span은 inline이 적용되어있다.
+
+## box-sizing: border-box;
+HTML과 CSS에서는 기본적으로 box에 padding을 추가했을때 box의 크기를 더 늘린다.
+ex) w: 300px, h:100px 인 박스에 padding-left: 20px, padding-top: 10px 를 하면 박스의 크기는 w: 320px, h:110px 이 된다.
+
+ex) <br>
+`* {` <br>
+  `box-sizing: border-box;`<br>
+`}`
+
+를 입력하면 padding이 content를 밀어냄. <br>
+-> box의 크기는 유지시키면서 padding을 넣을 수 있음.(물론 content의 크기는 작아짐.)
+
+**네비게이션 바가 오류가 났던 이유는 css 파일에 width를 100% 줘놓고 padding을 50px를 더 줬기 때문에 크기가 100%+50px가 되어버려 밀렸기 때문이다.**
