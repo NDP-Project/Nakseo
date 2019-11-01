@@ -342,3 +342,12 @@ ex) <br>
 **네비게이션 바가 오류가 났던 이유는 css 파일에 width를 100% 줘놓고 padding을 50px를 더 줬기 때문에 크기가 100%+50px가 되어버려 밀렸기 때문이다.**
 
 글씨의 색상을 연하게(검은색 -> 회색) 하고싶으면 opacity: 0.7; 이런식으로 쓰면 된다.
+
+position이 fixed인 container를 가운데 정렬하는 방법은 <br>
+> margin: 0 auto; <br>
+left: 0;<br>
+right: 0;
+
+
+
+what is `align-self:flex-start` ?
