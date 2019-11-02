@@ -351,3 +351,8 @@ right: 0;
 
 
 what is `align-self:flex-start` ?
+
+
+~ 의 뜻은 input 다음에 있는 sibling을 바로 선택하는것.
+
+HTML에서는 icon이 input 다음에 있어야 transition을 적용 할 수있음.
