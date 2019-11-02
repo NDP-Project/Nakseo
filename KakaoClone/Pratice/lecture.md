@@ -22,3 +22,7 @@ chats가 아닌 chat을 쓰는 이유는 여러가지 내용들을 적어야 할
 폴더나 파일명은 항상 소문자여야한다! 매우 중요!!! 
 
 한 페이지에 header는 여러개 들어가도 아무런 문제가 없다.
+
+username.github.io/a name of the project < publishing 한 내 프로젝트를 볼수있는 방법.
+
+**gh-pages 라는 branch를 만들어야한다.**
