@@ -356,3 +356,7 @@ what is `align-self:flex-start` ?
 ~ 의 뜻은 input 다음에 있는 sibling을 바로 선택하는것.
 
 **<중요> icon이 input 다음에 있어야 transition을 적용 할 수있음.**
+
+
+z-index 는 (애니메이션)layer의 순서이다.<br>
+z-index: 2; 라고 한다면 두번째 순서이다.(뒤로 밀린다)

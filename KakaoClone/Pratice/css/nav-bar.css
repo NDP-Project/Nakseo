@@ -1,10 +1,10 @@
 .nav {
   position: fixed;
   width: 100%;
-  left: 0%;
-  bottom: 0%;
-  padding: 20px 50px;
   background-color: #fcfcfc;
+  padding: 20px 50px;
+  left: 0px;
+  bottom: 0px;
   border-top: 1px solid #f7f7f7;
 }
 
@@ -23,15 +23,30 @@
 
 .nav .nav__badge {
   position: absolute;
-  top: -10px;
-  right: -10px;
+  top: -7px;
+  right: -7px;
+  font-size: 10px;
   color: white;
   background-color: #dc5d46;
-  width: 15px;
-  height: 15px;
-  font-size: 10px;
+  width: 18px;
+  height: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+}
+
+@keyframes showNavBar {
+  from {
+    transform: translateY(80px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.nav {
+  transform: translateY(80px);
+  animation: showNavBar 0.5s ease-out forwards;
+  animation-delay: 0.5s;
 }
