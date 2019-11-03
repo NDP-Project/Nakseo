@@ -25,4 +25,4 @@ chats가 아닌 chat을 쓰는 이유는 여러가지 내용들을 적어야 할
 
 username.github.io/a name of the project < publishing 한 내 프로젝트를 볼수있는 방법.
 
-**gh-pages 라는 branch를 만들어야한다.**
+**gh-pages 라는 branch를 만들어야한다**.
