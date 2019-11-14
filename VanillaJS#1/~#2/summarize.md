@@ -61,7 +61,7 @@ JS파일은 항상 Body 밑에 있어야 한다. (맨 마지막에 있어야한�
 		const a = 221;  
 		let b = a - 5;  
 		a = 4  
-		console.log(b,a)               >>> 결과는 에러가 	뜬다. const로 선언된 a라는 변수는 변할 수 없는데 	변하게 만들려고 했기 때문이다.
+		console.log(b,a)               >>> 결과는 에러가 뜬다. const로 선언된 a라는 변수는 변할 수 없는데 변하게 만들려고 했기 때문이다.
 
 
 * 주석처리를 하고싶을때는 한줄짜리 주석일 땐 // 를 사용하며, 여러줄을 통한 주석처리를 하고싶을땐, /* 를 적고 마침으로 */를 쓰면 된다.
@@ -111,11 +111,11 @@ JS파일은 항상 Body 밑에 있어야 한다. (맨 마지막에 있어야한�
 > 				age : 21  
 > 				gender : "male"  
 > 				favMovies : ["500일의 썸머",  
-> 								"엑시트",  
-> 								"신과함께"] <<< Object안에 Array를 넣음.  
+> 							"엑시트",  
+> 							"신과함께"] <<< Object안에 Array를 넣음.  
 > 				favFood : [{name : "kimchi",   
 > 							fatty : false},   
-> 						{name : "chicken",   
+> 							{name : "chicken",   
 > 							fatty ; true}]  <<< array속에 object를 넣음.  
 > 		}  
 
@@ -161,7 +161,7 @@ how to create function
 > 		SeonHo is male and 21               < 출력(age라고 입력한곳에 male이 왔고 gender라고 입력한곳에 21이 와도 아무런 문제가 없음.)
 
 
-위와같이 age와 gender가 각각 값을 가르키는것이 잘못되었지만 출력에는 아무런 문제가 없다.
+→ 위와같이 age와 gender가 각각 값을 가르키는것이 잘못되었지만 출력에는 아무런 문제가 없다.
 단, 함수를 **선언할 때 Argument를 잘 작성한다면 나중에 함수를 사용할 때 조금 더 직관적으로 편하고 빠르게** 값을 넣을 수 있다.
 
 - - - -
@@ -175,30 +175,30 @@ console.log("SeonHo is ", age, " and ", gender) 라고
 어떠한 변수(let/const/var)를 쓸 때 특정한 값을 반환하려고 한다면 return을 써야함.
 
 
->		 		ex)  
->		 		function sayHello(name,age){  
->		 		  return(`Hello ${name} you are a ${age} years old`);  
-> 				}  
+>		ex)  
+>		function sayHello(name,age){  
+>		  return(`Hello ${name} you are a ${age} years old`);  
+> 		}  
+> 		  
+> 		const greetNicolas = sayHello("Nicolas", 14)
 > 				  
-> 				const greetNicolas = sayHello("Nicolas", 14)
-> 				  
-> 				console.log(greetNicolas)  
+> 		console.log(greetNicolas)  
 > 				  
 > 				  
-> 				-> 출력 : Hello Nicolas you are a 14 years old
+> 		→ 출력 : Hello Nicolas you are a 14 years old
 
  ↑↑↑↑↑↑ 변수를 선언해서 쓰는 이유는 Hello Nicolas you are a 14 years old 라는 출력값을 중복해서 써야 할 경우 나중에 관리(값을 바꿈)할 때 맨 위에서 const greetNicolas = sayHello("name",age) 값만 바꾸면 모든 값이 바뀌므로 관리르 쉽게 하기 위하여 변수를 선언함. 
 
->const calculator = {  
->	plus: function(a,b ){  
->		return a + b;  
->	}  
->}  
->  
->const plus = calculator.plus(5, 5)  
->console.log(plus)  
->  
->-> 출력 : 10  
+>		const calculator = {  
+>			plus: function(a,b ){  
+>				return a + b;  
+>			}  
+>		}  
+>		  
+>		const plus = calculator.plus(5, 5)  
+>		console.log(plus)  
+>		  
+>		→ 출력 : 10  
 
 
 - - - -
@@ -209,126 +209,129 @@ console 이라는 명령어 목록? 에서 . 을 쓰면 그 목록에서 . 뒤�
 JS는 이벤트에 반응하기위해 만들어졌음.
 
 - - - -
->function handResize(){  
->	console.log("I have been resized");  
->}  
->  
->window.addEvenetListener("resize", handResize);  
+>		function handResize(){  
+>			console.log("I have been resized");  
+>		}  
+>		  
+>		window.addEvenetListener("resize", handResize);  
 
--> 여기에서 window. ~~~ , handResize()); 라고 적었다면 함수가 바로 실행됨.
+→ 여기에서 window. ~~~ , handResize()); 라고 적었다면 함수가 바로 실행됨.
 but 지금은 handResize); 라고 적었으므로 내가 필요할 때 호출됨.(바로 즉시 호출되지않음.) 중요!
 
 - - - -
-if(조건){
+	if(조건){
 	block
-} else {
+	} else {
 	block
-}
+	}
 
 
 
-조건에 && 가 들어간다면 && 앞 뒤 조건 모두 참이어야 참의 값으로 출력되고 아니라면 거짓의 값이 출력됨.
+→ 조건에 && 가 들어간다면 && 앞 뒤 조건 모두 참이어야 참의 값으로 출력되고 아니라면 거짓의 값이 출력됨.
 
 true && true = true
+
 true && false  = false
+
 false && true = false
+
 false && false = false
 
 
 - - - -
-> const age = promt("How old are you")  
->   
-> if (age > 18){  
-> 	console.log("You can drink")  
-> } else {  
-> 	console.log("you can't")  
-> }  
+> 		const age = promt("How old are you")  
+> 		  
+> 		if (age > 18){  
+> 			console.log("You can drink")  
+> 		} else {  
+> 			console.log("you can't")  
+> 		}  
 - - - -
-> const age = promt("How old are you")  
->   
-> if (age >= 18 && age <= 21) {  
-> 	console.log("You can drink but you should not")  
-> } else if(age > 21) {  
-> 	console.log("go ahead")  
-> } else {  
-> 	console.log("too young")  
-> }  
+> 		const age = promt("How old are you")  
+> 		  
+> 		if (age >= 18 && age <= 21) {  
+> 			console.log("You can drink but you should not")  
+> 		} else if(age > 21) {  
+> 			console.log("go ahead")  
+> 		} else {  
+> 			console.log("too young")  
+> 		}  
 - - - -
 - - - -
 - - - -
-> const title = document.querySelector("#title");  
->   
-> const BASE_COLOR = "#34495e";  
-> const OTHER_COLOR = "#7f9c8d";  
->   
-> function handleClick() {  
-> 	const currentColor  = title.style.color;  
-> 	if (currentColor === BASE_COLOR){  
-> 		title.style.color = OTHER_COLOR;  
-> 	} else {  
-> 		title.style.color = BASE_COLOR;  
-> 	}  
-> }  
->   
-> function init() {  
-> 	title.style.color = BASE_COLOR;  
-> 	title.addEventListener("click", handleClick);  
-> }  
->   
-> init();  
+> 		const title = document.querySelector("#title");  
+> 		  
+> 		const BASE_COLOR = "#34495e";  
+> 		const OTHER_COLOR = "#7f9c8d";  
+> 		  
+> 		function handleClick() {  
+> 			const currentColor  = title.style.color;  
+> 			if (currentColor === BASE_COLOR){  
+> 				title.style.color = OTHER_COLOR;  
+> 			} else {  
+> 				title.style.color = BASE_COLOR;  
+> 			}  
+> 		}  
+> 		  
+> 		function init() {  
+> 			title.style.color = BASE_COLOR;  
+> 			title.addEventListener("click", handleClick);  
+> 		}  
+> 		  
+> 		init();  
 - - - -
-> const title = document.querySelector("#title");  
->   
-> const CLICKED_CLASS = "clicked";  
->   
-> function handleClick() {  
->     const currentClass = title.className;  
->     if(currentClass !== CLICKED_CLASS){  
->        title.className = CLICKED_CLASS;  
->    } else {  
->        title.className = "";  
->    }  
-> }  
->   
-> function init() {  
->    title.addEventListener("click", handleClick);  
-> }  
-> init();  
+> 		const title = document.querySelector("#title");  
+> 		  
+> 		const CLICKED_CLASS = "clicked";  
+> 		  
+> 		function handleClick() {  
+> 		    const currentClass = title.className;  
+> 		    if(currentClass !== CLICKED_CLASS){  
+> 		       title.className = CLICKED_CLASS;  
+> 		   } else {  
+> 		       title.className = "";  
+> 		   }  
+> 		}  
+> 		  
+> 		function init() {  
+> 		   title.addEventListener("click", handleClick);  
+> 		}  
+> 		init();  
 
--> 함수 변경
+→ 함수 변경
 
-> const title = document.querySelector("#title");  
+> 		const title = document.querySelector("#title");  
+> 		  
+> 		const CLICKED_CLASS = "clicked";  
+> 		  
+> 		function handleClick() {  
+> 		    const hasClass = title.classList.contains(CLICKED_CLASS);  
 >   
-> const CLICKED_CLASS = "clicked";  
->   
-> function handleClick() {  
->     const hasClass = title.classList.contains(CLICKED_CLASS);  
->   
->     if (!hasClass){  
->         title.classList.add(CLICKED_CLASS);  
->     } else {  
->         title.classList.remove(CLICKED_CLASS);  
->     }  
-> }  
->   
-> function init() {  
->     title.addEventListener("click", handleClick);  
-> }  
-> init();  
-
-
--> toggle 함수 추가
+>		     if (!hasClass){  
+>		         title.classList.add(CLICKED_CLASS);  
+>		     } else {  
+>		         title.classList.remove(CLICKED_CLASS);  
+>		     }  
+>		 }  
+>		   
+>		 function init() {  
+>		     title.addEventListener("click", handleClick);  
+>		 }  
+>		 init();  
 
 
-> const title = document.querySelector("#title");  
->   
-> const CLICKED_CLASS = "clicked";  
->   
-> function handleClick() {  
->     title.classList.toggle(CLICKED_CLASS);  
-> }  
->   
-> function init() {  
->     title.addEventListener("click", handleClick);  
-> }  
-> init();  
+→ toggle 함수 추가
+
+
+> 		const title = document.querySelector("#title");  
+> 		  
+> 		const CLICKED_CLASS = "clicked";  
+> 		  
+> 		function handleClick() {  
+> 		    title.classList.toggle(CLICKED_CLASS);  
+> 		}  
+> 		  
+> 		function init() {  
+> 		    title.addEventListener("click", handleClick);  
+> 		}  
+> 		init();  
