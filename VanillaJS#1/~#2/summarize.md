@@ -1,5 +1,39 @@
+# VSC 단축키
+1. command + d 
+	
+	똑같은 단어 선택 (form 여러개 있을때 줄 관계없이 선택함.)
+
+2. option + click
+
+	내가 클릭하는 곳마다 커서를 만들어줌.
+
+3. option + ↑ / ↓
+
+	선택된 코드를 위 아래로 움직여줌.
+
+4. option + shift + ↑ / ↓
+
+	선택된 코드를 '복사'하여 위 아래로 움직임.
+
+5. command + /
+
+	선택된 코드들을 한꺼번에 코멘트 처리함.
+
+6. option + shift + i
+
+	선택된 영역 내 가장 마지막 줄들에 커서가 놓임.
+
+7. option + shift + drag 
+
+	(드래그하여) 선택된 영역에 커서를 둠.
+
+8. option + command + ↑ / ↓ 	
+
+	커서가 위 아래로 선택된다.
+
 # Vanilla JS 1
 JS파일은 항상 Body 밑에 있어야 한다. (맨 마지막에 있어야한다??)
+
 
 ## 1.Variable(변수) : 변경되거나 변경될 수 있는것.
 
@@ -13,24 +47,26 @@ JS파일은 항상 Body 밑에 있어야 한다. (맨 마지막에 있어야한�
 
 * 코드는 위에서부터 아래로 차례로 실행된다. (논리적임)
 
+* === 같다 // !== 같지않다.
+
 * const (constant, 상수=안정적, 변하지않는 함수 선언) - let 과 var를 통해 함수를 선언하면 함수가 변할 수 있음.
 
-> ex)   
+###    
 
-> 	let a = 221;  
->  	let b = a - 5;  
->  	a = 4  
->  	console.log(b,a)           >>> 결과로 216,4 가 출력되지만,  
-> ---
->  const a = 221;  
->  let b = a - 5;  
->  a = 4  
->  console.log(b,a)               >>> 결과는 에러가 뜬다. const로 선언된 a라는 변수는 변할 수 없는데 변하게 만들려고 했기 때문이다.
+	ex) let a = 221;  
+		let b = a - 5;  
+		a = 4  
+		console.log(b,a)           >>> 결과로 216,4 가출력되지만,  
+ 	--
+		const a = 221;  
+		let b = a - 5;  
+		a = 4  
+		console.log(b,a)               >>> 결과는 에러가 	뜬다. const로 선언된 a라는 변수는 변할 수 없는데 	변하게 만들려고 했기 때문이다.
 
 
 * 주석처리를 하고싶을때는 한줄짜리 주석일 땐 // 를 사용하며, 여러줄을 통한 주석처리를 하고싶을땐, /* 를 적고 마침으로 */를 쓰면 된다.
 
-* 변수선언은 무조건 const로 쓰고, 정말 필요할때만 let 또는 var을 써라.
+* 변수선언은 무조건 const로 쓰고, 정말 필요할때만 let 또는 var을 써라.(const 이외의 것들로 변수선언을 하면 변수가 달라질 수 있다.)
 
 * string 은 텍스트를 의미함.
 "string" 	이라고 " " 사이에 입력해야 출력을 할 때 string이라고 제대로 텍스트가 출력됨. 그냥 string이라고만 적으면 JS가 문서 내에서 string이라는 변수를 찾게되고, 당연히 그러한 함수는 없으므로 오류가 생성되는것.
@@ -51,35 +87,37 @@ JS파일은 항상 Body 밑에 있어야 한다. (맨 마지막에 있어야한�
 변수를 선언하고 초기화 할 때 { } 사이에 값을 넣으면 됨.
 & JS의 특성을 이용해서 그 값을 바꿀 수 있음.
 
-> ex)  
-> const seonhoinfo = {  
-> 		name : "nakseo",  
-> 		age : 21,  
-> 		gender : "male"  
-> }  
+> 		ex)  
+> 		const seonhoinfo = {  
+> 				name : "nakseo",  
+> 				age : 21,  
+> 				gender : "male"  
+> 		}  
 
-> seonhoinfo.name = "nakseo"  
+> 		seonhoinfo.name = "nakseo"  
 
-> console.log(seonhoinfo.age);   
-> console.log(seonhoinfo.name);  
-> >>> 21  
-> 	nakseo  
 
- 
+>		console.log(seonhoinfo.age);   
+>		console.log(seonhoinfo.name);  
+>		---
+>		21  
+>		nakseo  
+
+
 + Array와 Object를 같이 사용하는 방법도 존재.
-> ex)   
-> const seonhoinfo = {  
-> 		name : "선호"  
-> 		age : 21  
-> 		gender : "male"  
-> 		favMovies : ["500일의 썸머",  
-> 						"엑시트",  
-> 						"신과함께"]                          <<< Object안에 Array를 넣음.  
-> 		favFood : [{name : "kimchi",   
-> 					fatty : false},   
-> 				{name : "chicken",   
-> 					fatty ; true}]                        <<< array속에 object를 넣음.  
-> }  
+> 		ex)   
+> 		const seonhoinfo = {  
+> 				name : "선호"  
+> 				age : 21  
+> 				gender : "male"  
+> 				favMovies : ["500일의 썸머",  
+> 								"엑시트",  
+> 								"신과함께"] <<< Object안에 Array를 넣음.  
+> 				favFood : [{name : "kimchi",   
+> 							fatty : false},   
+> 						{name : "chicken",   
+> 							fatty ; true}]  <<< array속에 object를 넣음.  
+> 		}  
 
 
 
@@ -93,9 +131,9 @@ ex) days of week -> daysOfWeek
 # Function 함수
 how to create function
 
-> function sayHello(){  
-> 	console.log("Hello!");  
-> }  
+> 		function sayHello(){  
+> 			console.log("Hello!");  
+> 		}  
 
 
 함수 function() 에서 ( ) 괄호 안에 들어가는 값을 Argument or Parameter(인자) 라고 부른다.
@@ -103,24 +141,24 @@ how to create function
 
 이 Argument를 이용해 함수를 쓴 예시
 
-> function sayHello(name){  
-> 	console.log("Hello!", name)  
-> }  
->   
-> sayHello("SeonHo");               < 입력시  
->   
-> Hello! SeonHo                     < 라고 출력됨.   
+> 		function sayHello(name){  
+> 			console.log("Hello!", name)  
+> 		}  
+> 		  
+> 		sayHello("SeonHo");               < 입력시  
+> 		  
+> 		Hello! SeonHo                     < 라고 출력됨.   
 
 함수 인자와 나중에 함수를 쓸 때 들어가는 인자와의 관계는 아무런 관련이 없음.
 
-> ex)   
-> function who(age,gender){  
-> 	console.log("SeonHo is ", age, " and ", gender)  
-> }  
->   
-> who("male", 21)                      < 입력  
->   
-> SeonHo is male and 21               < 출력(age라고 입력한곳에 male이 왔고 gender라고 입력한곳에 21이 와도 아무런 문제가 없음.)
+> 		ex)   
+> 		function who(age,gender){  
+> 			console.log("SeonHo is ", age, " and ", gender)  
+> 		}  
+> 		  
+> 		who("male", 21)                      < 입력  
+> 		  
+> 		SeonHo is male and 21               < 출력(age라고 입력한곳에 male이 왔고 gender라고 입력한곳에 21이 와도 아무런 문제가 없음.)
 
 
 위와같이 age와 gender가 각각 값을 가르키는것이 잘못되었지만 출력에는 아무런 문제가 없다.
@@ -137,29 +175,30 @@ console.log("SeonHo is ", age, " and ", gender) 라고
 어떠한 변수(let/const/var)를 쓸 때 특정한 값을 반환하려고 한다면 return을 써야함.
 
 
-> ex)  
-> function sayHello(name,age){  
->   return(`Hello ${name} you are a ${age} years old`);  
-> }  
->   
-> const greetNicolas = sayHello("Nicolas", 14)
->   
-> console.log(greetNicolas)  
->   
->   
-> -> 출력 : Hello Nicolas you are a 14 years old
-<<<< 변수를 선언해서 쓰는 이유는 Hello Nicolas you are a 14 years old 라는 출력값을 중복해서 써야 할 경우 나중에 관리(값을 바꿈)할 때 맨 위에서 const greetNicolas = sayHello("name",age) 값만 바꾸면 모든 값이 바뀌므로 관리르 쉽게 하기 위하여 변수를 선언함. 
+>		 		ex)  
+>		 		function sayHello(name,age){  
+>		 		  return(`Hello ${name} you are a ${age} years old`);  
+> 				}  
+> 				  
+> 				const greetNicolas = sayHello("Nicolas", 14)
+> 				  
+> 				console.log(greetNicolas)  
+> 				  
+> 				  
+> 				-> 출력 : Hello Nicolas you are a 14 years old
 
-> const calculator = {  
-> 	plus: function(a,b ){  
-> 		return a + b;  
-> 	}  
-> }  
->   
-> const plus = calculator.plus(5, 5)  
-> console.log(plus)  
->   
-> -> 출력 : 10  
+ ↑↑↑↑↑↑ 변수를 선언해서 쓰는 이유는 Hello Nicolas you are a 14 years old 라는 출력값을 중복해서 써야 할 경우 나중에 관리(값을 바꿈)할 때 맨 위에서 const greetNicolas = sayHello("name",age) 값만 바꾸면 모든 값이 바뀌므로 관리르 쉽게 하기 위하여 변수를 선언함. 
+
+>const calculator = {  
+>	plus: function(a,b ){  
+>		return a + b;  
+>	}  
+>}  
+>  
+>const plus = calculator.plus(5, 5)  
+>console.log(plus)  
+>  
+>-> 출력 : 10  
 
 
 - - - -
@@ -170,11 +209,11 @@ console 이라는 명령어 목록? 에서 . 을 쓰면 그 목록에서 . 뒤�
 JS는 이벤트에 반응하기위해 만들어졌음.
 
 - - - -
-> function handResize(){  
-> 	console.log("I have been resized");  
-> }  
->   
-> window.addEvenetListener("resize", handResize);  
+>function handResize(){  
+>	console.log("I have been resized");  
+>}  
+>  
+>window.addEvenetListener("resize", handResize);  
 
 -> 여기에서 window. ~~~ , handResize()); 라고 적었다면 함수가 바로 실행됨.
 but 지금은 handResize); 라고 적었으므로 내가 필요할 때 호출됨.(바로 즉시 호출되지않음.) 중요!
