@@ -17,32 +17,30 @@
 
 ## CSS의 elements들은 모두 박스이다.
 
-> .css{
-
-    background-color : red; <br>
-    width : 50%; <br>
-    height : 50px; <br>
-    margin : 20px 10px 5px 2px <br>
-    border-width : 5px; <br>
-    border-color : yellow; <br>
-    border-style : dashed; <br>
-
-}
+    .css{
+      background-color : red;
+      width : 50%;
+      height : 50px;
+      margin : 20px 10px 5px 2px;
+      border-width : 5px;
+      border-color : yellow;
+      border-style : dashed;
+    }
 
 margin > border > padding > content
 
 ![box](./image/box.png)
 
 - Margin / Border / Padding
-  > 1. 공백값을 상하좌우 모두 50px 주고싶으면 그냥 padding(Border,Margin 이하동문):50px; 라고 적으면됨.
-  > 2. 상-하는 20px, 좌-우는 10px 주고싶으면 padding:20px 10px; 라고 씀. padding이후 첫번째 숫자는 상-하를, 두번째 숫자는 좌-우를 뜻함.
-  > 3. 상-우-하-좌 시계방향 순서대로 적용할 수도 있음. padding:20px 10px 5px 2px;
+  1. 공백값을 상하좌우 모두 50px 주고싶으면 그냥 padding(Border,Margin 이하동문):50px; 라고 적으면됨.
+  2. 상-하는 20px, 좌-우는 10px 주고싶으면 padding:20px 10px; 라고 씀. padding이후 첫번째 숫자는 상-하를, 두번째 숫자는 좌-우를 뜻함.
+  3. 상-우-하-좌 시계방향 순서대로 적용할 수도 있음. padding:20px 10px 5px 2px;
 
 ---
 
 ## Display
 
-> display : block;
+    display : block;
 
 박스는 block이나 inline block 둘 중 하나가 되어야 함. default = block
 
@@ -58,15 +56,15 @@ inline - 인라인으로 설정하면 더이상 블록이 아님. just 텍스트
 
 ## Position
 
-- Static : 그 element를 그 자리에 두면 항상 거기에 존재한다. <br>
+- **Static** : 그 element를 그 자리에 두면 항상 거기에 존재한다. <br>
   모든 박스의 default position 값이다.
 
-- Fixed : 화면에 오버랩되어 고정되어 있어서 스크롤을 올리든, 내리든 그 자리를 유지한다.
+- **Fixed** : 화면에 오버랩되어 고정되어 있어서 스크롤을 올리든, 내리든 그 자리를 유지한다.
 
-- Absolute : fixed와 비슷하지만 스크롤한다고 보이지는 않는다. <br>
+- **Absolute** : fixed와 비슷하지만 스크롤한다고 보이지는 않는다. <br>
   position이 absolute로 설정되면 html상에서 해당 element와 관계가 있는 relative element를 살펴보고 이에 상응해서 자리가 결정된다.
 
-- Relative : 부모박스. 단독으로 쓰는데에 의미가 없음.
+- **Relative** : 부모박스. 단독으로 쓰는데에 의미가 없음.
 
 **Static은 default값 <br>
 Fixed는 고정, 어디든 오버랩되어서 계속 해당 위치에 고정시키기 위한 것. <br>
@@ -79,7 +77,7 @@ Absolute는 Relative에 상대적으로 포지션을 잡는것. relative 포지�
 
 ### order
 
-`order: 정수;`
+    order: 정수;
 
 ### justify-content
 
@@ -129,10 +127,11 @@ nowrap: 모든 요소들을 한 줄에 정렬합니다.
 wrap: 요소들을 여러 줄에 걸쳐 정렬합니다.
 wrap-reverse: 요소들을 여러 줄에 걸쳐 반대로 정렬합니다.
 
-> flex-direction과 flex-wrap이 자주 같이 사용되기 때문에, flex-flow가 이를 대신할 수 있습니다. 이 속성은 공백문자를 이용하여 두 속성의 값들을 인자로 받습니다.
->
-> 예를 들어, 요소들을 가로선 상의 여러줄에 걸쳐 정렬하기 위해 flex-flow: row wrap을 사용할 수 있습니다.
-> \*\* flex-flow: <flex-direction> <flex-wrap>
+    flex-direction과 flex-wrap이 자주 같이 사용되기 때문에, flex-flow가 이를 대신할 수 있습니다. 이 속성은 공백문자를 이용하여 두 속성의 값들을 인자로 받습니다.
+
+     예를 들어, 요소들을 가로선 상의 여러줄에 걸쳐 정렬하기 위해 flex-flow: row wrap을 사용할 수 있습니다.
+    
+      flex-flow: <flex-direction> <flex-wrap>
 
 ### align-content
 
@@ -154,38 +153,37 @@ wrap-reverse: 요소들을 여러 줄에 걸쳐 반대로 정렬합니다.
 **단순한 선택자 (HTML Tag, ID, Class)등으로 표현할 수 없는 어떤 것을 select하는 선택자임.**<br>
 **특정한 상태 말고 규칙에 따라 상태가 바뀌는 요소를 선택할 때 사용하는 것이다.**
 
-> selector:pseudo-name{ <br>
-> property:value; <br>
-> }
+    selector:pseudo-name{ 
+    property:value; 
+    }
+  ---
+    ex) 
+    input[type="submit"]{ 
+      background-color:red; 
+    }
+    input{ 
+      border:1px solid yellow; 
+    }
+    .box :last-child{ 
+      background-color:pink; 
+    }
+---
+    <div class="container"> 
+      <div class="box">
+        <div class="box child"> </div>
+      </div>
+    </div>
+    
+    1. .container .box{ 
+       background-color:red;
+       }
+    2. .child{  
+        background-color:blue;
+       }
 
-> example) <br>
-> input[type="submit"]{ <br>
-> background-color:red; <br>
-> }
->
-> input{ <br>
-> border:1px solid yellow; <br>
-> }
->
-> .box :last-child{ <br>
-> background-color:pink; <br>
-> }
->
-> ---
->
-> `<div class="container">`<br> > `<div class="box">`<br> > `<div class="box child"></div>`<br> > `</div>`<br> > `</div>`
->
-> 1. .container > .box{ <br>
->    background-color:red;<br>
->    }
->
-> 2. .child{  
->     background-color:blue;<br>
->    }
+1. ← container라는 class 이하 box라는 class를 가진 모든 값들이 선택됨.(직계)
 
-> 1. <- container라는 class 이하 box라는 class를 가진 모든 값들이 선택됨.(직계)
-
-> 2. <- 하지만 child는 box의 직계 아이라서 container에 영향을 받지 않음.
+2. ← 하지만 child는 box의 직계 아이라서 container에 영향을 받지 않음.
 
 ---
 
@@ -193,30 +191,27 @@ wrap-reverse: 요소들을 여러 줄에 걸쳐 반대로 정렬합니다.
 
 1. :active
 
-> .box:active{ <br>
-> background-color: green; <br>
-> } <br> > <br>
-> -> 클릭할때마다 배경색이 녹색이 되었다가 바뀜.
+        .box:active{   
+          background-color: green;   
+        }  
+
+    → 클릭할때마다 배경색이 녹색이 되었다가 바뀜.
 
 2. focus
 
-> .box:focus{
-> background-color:blue;
-> }
->
-> ->
-
+        .box:focus{
+          background-color:blue;
+        }
 3. visited
 
--> 아마 하이퍼링크처럼 클릭했던 부분은 색깔 변하게 만드는 것 같다.
+    → 아마 하이퍼링크처럼 클릭했던 부분은 색깔 변하게 만드는 것 같다.
 
 4. hover
 
-> .box:hover{ <br>
-> background-color: pink; <br>
-> } <br>
-> <br>
-> -> 박스 위에 무언가가(마우스 커서) 올라타면 배경색이 핑크로 바뀜.
+        .box:hover{
+          background-color: pink;
+        }
+    → 박스 위에 무언가가(마우스 커서) 올라타면 배경색이 핑크로 바뀜.
 
 ---
 
@@ -226,52 +221,47 @@ wrap-reverse: 요소들을 여러 줄에 걸쳐 반대로 정렬합니다.
 
 ### 1. Transitions
 
-What is Transition? -> 이동/변경을 멋지게 보여주는 효과. 애니메이션이라고 생각하면 편리할듯.
+What is Transition? → 이동/변경을 멋지게 보여주는 효과. 애니메이션이라고 생각하면 편리할듯.
 
 **트랜지션은 state 중 visited를 제외한 focus, hover, active에서 효과적으로 적용이 됨.**
 
 ex)
 
-> `<style>`<br>
-> .box{ <br>
-> background-color:blue;<br>
-> color:white;<br>
-> transition:background-color 5s ease-in-out<br>
-> }<br>
-> .box:hover{<br>
-> background-color:red;<br>
-> }<br> >`</style>`
+    .box{ 
+      background-color:blue;
+      color:white;
+      transition:background-color 5s ease-in-out
+    }
+    .box:hover{
+      background-color:red;
+    } 
 
 ---
 
 ### 2. Transformations
 
-What is Transformations? -> HTML문서의 element들이 변경, 모습이 변하는 효과.
+What is Transformations? → HTML문서의 element들이 변경, 모습이 변하는 효과.
 박스를 만들고 그 박스를 회전시킬 수 있음.
 
 **트랜지션과 트랜스포메이션을 합쳐서 사용하는 경우가 많음!**
 
-ex)
-
-> `<style>` <br>
-> .box{<br>
-> width: 100px;<br>
-> height: 100px;<br>
-> background: red;<br>
-> transtion: transform .5s ease-in-out;<br>
-> }<br>
-> .box:hover{<br>
-> transform: rotate(1turn);<br>
-> }<br> >`</style>`
-
+    .box{
+      width: 100px;
+      height: 100px;
+      background: red;
+      transtion: transform .5s ease-in-out;
+    }
+    .box:hover{
+      transform: rotate(1turn);
+    } 
 ---
 
 ### 3. Animations
 
-What is Animations? -> 트랜지션과 트랜스포메이션을 합쳤을 때 hover할 때 박스가 돌아가도록 설정했는데,
+What is Animations? → 트랜지션과 트랜스포메이션을 합쳤을 때 hover할 때 박스가 돌아가도록 설정했는데,
 hover 하지않아도 계속 돌아가게 할 수 있음!
 
-- **@keyframes** <- CSS로 하여금 '내가 지금 애니메이션을 생성했다' 라는것을 알려줌.
+- **@keyframes** ← CSS로 하여금 '내가 지금 애니메이션을 생성했다' 라는것을 알려줌.
 
   그러므로 애니메이션 이름을 지을 때
 
@@ -284,28 +274,28 @@ hover 하지않아도 계속 돌아가게 할 수 있음!
 
 ex)
 
-> @keyframes exAniName { <br>
-> from{<br>
-> transform: none;<br>
-> }<br>
-> to{<br>
-> transfrom: rotate(1turn) scale(.5, .5);<br>
-> }<br>
-> }<br> ><br>
-> .box {<br>
-> animation: 1.5s exAniName ease-in-out;<br>
-> }<br>
+    @keyframes exAniName { 
+    from{
+      transform: none;
+    }
+    to{
+      transfrom: rotate(1turn) scale(.5, .5);
+    }
+    } >
+    .box {
+      animation: 1.5s exAniName ease-in-out;
+    }
 
 ### 4. Media Queries
 
-body{
-backhground-color:green;
-}
-**@media screen and (min-width 320px) and (max-width 640px) {**
-body{
-background-color:blue;
-}
-**}**
+    body{
+      backhground-color:green;
+    }
+    @media screen and (min-width 320px) and (max-width 640px) {
+      body{
+        background-color:blue;
+      }
+    }
 
 웹페이지의 크기에 따라 규칙을 작성하는것.
 320-640 크기에 맞는 페이지라면, 그 페이지의 배경색은 blue이고 그 외의 배경색은 green이다...
@@ -318,7 +308,7 @@ background-color:blue;
 
 ## Reset CSS
 
--> 모든 기본값을 margin:0으로 만드는것.
+→ 모든 기본값을 margin:0으로 만드는것.
 
 ## 작업을 할 때 파일을 여러가지(기능별)로 쪼개는것이 좋다.
   계속 스크롤하기도 어렵고, 나중에 수정하기도 편하기 때문이다.
@@ -329,28 +319,31 @@ span은 inline이 적용되어있다.
 
 ## box-sizing: border-box;
 HTML과 CSS에서는 기본적으로 box에 padding을 추가했을때 box의 크기를 더 늘린다.
+
 ex) w: 300px, h:100px 인 박스에 padding-left: 20px, padding-top: 10px 를 하면 박스의 크기는 w: 320px, h:110px 이 된다.
 
-ex) <br>
-`* {` <br>
-  `box-sizing: border-box;`<br>
-`}`
+ex)
+
+    * { 
+      box-sizing: border-box;
+    }
 
 를 입력하면 padding이 content를 밀어냄. <br>
--> box의 크기는 유지시키면서 padding을 넣을 수 있음.(물론 content의 크기는 작아짐.)
+→ box의 크기는 유지시키면서 padding을 넣을 수 있음.(물론 content의 크기는 작아짐.)
 
 **네비게이션 바가 오류가 났던 이유는 css 파일에 width를 100% 줘놓고 padding을 50px를 더 줬기 때문에 크기가 100%+50px가 되어버려 밀렸기 때문이다.**
 
-글씨의 색상을 연하게(검은색 -> 회색) 하고싶으면 opacity: 0.7; 이런식으로 쓰면 된다.
+글씨의 색상을 연하게(검은색 → 회색) 하고싶으면 opacity: 0.7; 이런식으로 쓰면 된다.
 
-position이 fixed인 container를 가운데 정렬하는 방법은 <br>
-> margin: 0 auto; <br>
-left: 0;<br>
-right: 0;
+position이 fixed인 container를 가운데 정렬하는 방법은 
+
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 
 
 
-what is `align-self:flex-start` ?
+### what is `align-self:flex-start` ?
 
 
 ~ 의 뜻은 input 다음에 있는 sibling을 바로 선택하는것.
