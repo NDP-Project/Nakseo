@@ -1,6 +1,7 @@
 const form = document.querySelector(".js-form"),
   input = form.querySelector("input"),
   // form.querySelector 인 이유는 input이 form이라는 class의 아들이기 때문에 특정하기위해 from.~ 으로 쓴것이다.
+  // 결국 querySelector는 명령어일 뿐임.
   greeting = document.querySelector(".js-greetings");
 // ↑ 여기서 const로 여러가지를 선언하는것은 이후에 작성할 때 편하게 사용하기위함.(중복을 줄이기 위하여)
 
